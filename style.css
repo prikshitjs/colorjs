@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: #194854;
+}
+main
+{
+    max-width: 1000px;
+    color: #fff;
+    margin: 0 20px;
+}
+main h1
+{
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    position: relative;
+    width: fit-content;
+}
+main p
+{
+    margin: 30px 0;
+}
+main button
+{
+    padding: 5px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.4s;
+    position: relative;
+}
+main button:hover
+{
+    filter: brightness(0.8);
+}
+.selectbtn
+{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 4px;
+    transition: 0.4s;
+    cursor: pointer;
+    z-index: 101;
+}
+span:hover
+{
+    filter: brightness(0.8);
+}
+.color-popup
+{
+    height: 100vh;
+    position: fixed;
+    background: radial-gradient(#00000093,transparent);
+    width: 100%;
+    display: grid;
+    place-items: center;
+    z-index: 100;
+    transform: translateY(-700px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+}
+.show
+{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+#close-popup
+{
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    font-size: 37px;
+    color: #fff;
+    cursor: pointer;
+}
+.popup-content
+{
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
+.inputdiv
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.savebtn
+{
+    padding: 4px 15px;
+    margin-top: 20px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.savebtn:hover
+{
+    filter: brightness(0.8);
+}
+input
+{
+    border: none;
+    background: none;
+}

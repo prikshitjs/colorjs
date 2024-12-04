@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Combination || Prikshit.js</title>
+    <!-- link the css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link the icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    <div class="color-popup">
+        <i onclick="closepopup()" id="close-popup" class="fa-solid fa-xmark"></i>
+        <div class="popup-content">
+            <div class="inputdiv">
+                <label for="bodycolor">Body color</label>
+                <input id="bodycolor" type="color">
+            </div>
+            <div class="inputdiv">
+                <label for="textcolor">Text color</label>
+                <input id="textcolor" type="color">
+            </div>
+            <button class="savebtn">Save</button>
+        </div>
+    </div>
+    <main>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus placeat officia, illum iste voluptates voluptatum quos accusantium autem sequi rem nobis ex suscipit esse, cupiditate et consequuntur in. Adipisci inventore voluptates quas vitae obcaecati ipsam, fuga provident deserunt quae a. Blanditiis exercitationem molestiae magnam qui consequuntur tempore maxime, alias molestias iste assumenda magni nobis iusto laudantium quod soluta non ab praesentium quisquam!</p>
+        <button class="btn">Call to action</button>
+    </main>
+    <span onclick="openpopup()" class="selectbtn"><i class="fa-solid fa-paintbrush"></i></span>
+    <script src="script.js"></script>
+</body>
+</html>
