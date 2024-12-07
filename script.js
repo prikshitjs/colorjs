@@ -6,7 +6,7 @@ let btn    = document.querySelector(".btn");
 let selectbtn = document.querySelector(".selectbtn");
 
 // get color popup
-let colorpopup = document.querySelector(".color-popup")
+let colorpopup = document.querySelector(".popup-content")
 
 // get input fields
 let bodycolor = document.getElementById("bodycolor");
@@ -16,37 +16,42 @@ let savebtn    = document.querySelector(".savebtn");
 let bgcolor='';
 let txtcolor='';
 
-
 savebtn.addEventListener("click", ()=> {
+    colorpopup.classList.remove("show");
+})
+bodycolor.addEventListener("input", ()=> {
     let body_bg = bodycolor.value;
-    let text = textcolor.value;
 
     bgcolor=body_bg;
-    txtcolor=text;
 
     body.style.background = bgcolor;
+    
+    // for call to action btn
+    btn.style.color = bgcolor;
+
+    // for color select btn
+    selectbtn.style.color = bgcolor;
+
+    localStorage.setItem("b******",bgcolor);
+});
+textcolor.addEventListener("input", ()=> {
+    let text = textcolor.value;
+
+    txtcolor=text;
+
     main.style.color = txtcolor;
     
     // for call to action btn
     btn.style.background = txtcolor;
-    btn.style.color = bgcolor;
 
     // for color select btn
     selectbtn.style.background = txtcolor;
-    selectbtn.style.color = bgcolor;
 
-    closepopup();
-    localStorage.setItem("b******",bgcolor);
     localStorage.setItem("t******",txtcolor);
-})
-
+});
 function openpopup() {
-    colorpopup.classList.add("show")
+    colorpopup.classList.toggle("show");
 }
-function closepopup() {
-    colorpopup.classList.remove("show")
-}
-
 let setcolors=()=> {
     let bgcolor = localStorage.getItem("b******");
     let txtcolor = localStorage.getItem("t******");
