@@ -61,26 +61,6 @@ span:hover
 {
     filter: brightness(0.8);
 }
-.color-popup
-{
-    height: 100vh;
-    position: fixed;
-    background: radial-gradient(#00000093,transparent);
-    width: 100%;
-    display: grid;
-    place-items: center;
-    z-index: 100;
-    transform: translateY(-700px);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.6s;
-}
-.show
-{
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-}
 #close-popup
 {
     position: fixed;
@@ -95,6 +75,20 @@ span:hover
     background: #fff;
     padding: 10px;
     border-radius: 4px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 200;
+    transform: translateY(-150px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.show
+{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 .inputdiv
 {
@@ -102,6 +96,7 @@ span:hover
     align-items: center;
     gap: 10px;
     margin-top: 10px;
+    z-index: 200;
 }
 .savebtn
 {
